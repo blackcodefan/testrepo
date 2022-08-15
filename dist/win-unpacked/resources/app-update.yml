@@ -1,0 +1,6 @@
+owner: fantasticDev2
+repo: ElectronJS_App
+provider: github
+updaterCacheDirName: electronapp-updater
+publisherName:
+  - Electron Menu

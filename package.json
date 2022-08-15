@@ -1,0 +1,90 @@
+{
+  "name": "electronapp",
+  "version": "1.0.0",
+  "description": "ElectronJs Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-installer": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fantasticDev2/ElectronJS_App.git"
+  },
+  "keywords": [
+    "electronjs"
+  ],
+  "author": "steadydevelop@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "dns": "^0.2.2",
+    "electron-debug": "^3.1.0",
+    "electron-is-dev": "^1.2.0",
+    "electron-online": "^1.0.0",
+    "electron-splashscreen": "^1.0.0",
+    "jquery": "^3.5.1",
+    "npm-install-offline": "^1.2.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.1.0",
+    "electron-prebuilt-compile": "^8.2.0"
+  },
+  "build": {
+    "appId": "com.electron.menu",
+    "productName": "Electron App",
+    "copyright": "Copyright © 2020 fantasticDev",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "assets/icon.ico",
+      "target": [
+        "zip",
+        "dmg"
+      ],
+      "publish": [
+        "github"
+      ]
+    },
+    "win": {
+      "publisherName": "Electron Menu",
+      "publish": [
+        "github"
+      ],
+      "icon": "assets/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "tar.gz"
+      ]
+    },
+    "dmg": {
+      "background": "assets/splash_windows.png",
+      "icon": "assets/icon.ico",
+      "title": "Electron Menu"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "assets/icon.ico",
+      "installerSidebar": "assets/splash_windows.png",
+      "uninstallerSidebar": "assets/splash_windows.png",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "fantasticDev",
+        "repo": "ElectronJS_App",
+        "vPrefixedTagName": true,
+        "private": true,
+        "releaseType": "draft"
+      }
+    ]
+  }
+}
